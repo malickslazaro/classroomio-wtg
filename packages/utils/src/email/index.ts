@@ -5,6 +5,8 @@ export const EMAIL_LOCALES = ['en', 'hi', 'fr', 'pt', 'de', 'vi', 'ru', 'es', 'p
 
 export type EmailLocale = (typeof EMAIL_LOCALES)[number];
 
+export const DEFAULT_LOCALE: EmailLocale = 'es';
+
 export const STUDENT_EMAIL_IDS = [
   'studentCourseInvite',
   'studentCourseWelcome',
@@ -138,9 +140,9 @@ export function resolveStudentEmailLocale(input: {
   enforced: boolean;
   locale: unknown;
 }): EmailLocale {
-  if (!input.isEligible) return 'en';
+  if (!input.isEligible) return DEFAULT_LOCALE;
 
-  return input.enforced && isEmailLocale(input.locale) ? input.locale : 'en';
+  return input.enforced && isEmailLocale(input.locale) ? input.locale : DEFAULT_LOCALE;
 }
 
 export function isStudentEmailId(value: unknown): value is StudentEmailId {

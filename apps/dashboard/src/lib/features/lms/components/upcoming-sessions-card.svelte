@@ -3,7 +3,7 @@
   import { RadioIcon } from '@cio/ui/custom/moving-icons';
   import ClockIcon from '@lucide/svelte/icons/clock';
   import VideoIcon from '@lucide/svelte/icons/video';
-  import { t } from '$lib/utils/functions/translations';
+  import { currentDateLocale, t } from '$lib/utils/functions/translations';
 
   interface SessionItem {
     lessonId: string;
@@ -18,7 +18,7 @@
 
   function dateLabel(iso: string, tz?: string | null): string {
     try {
-      return new Intl.DateTimeFormat('en-US', {
+      return new Intl.DateTimeFormat(currentDateLocale(), {
         timeZone: tz || Intl.DateTimeFormat().resolvedOptions().timeZone,
         dateStyle: 'medium',
         timeStyle: 'short'

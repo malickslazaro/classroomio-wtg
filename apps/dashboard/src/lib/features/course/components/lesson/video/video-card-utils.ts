@@ -1,3 +1,4 @@
+import { currentDateLocale } from '$lib/utils/functions/translations';
 import {
   dedupe,
   getVideoMediaType,
@@ -184,7 +185,7 @@ export function formatVideoCreatedAt(isoString: string | null | undefined): stri
   if (!isoString || typeof isoString !== 'string') return null;
   const d = new Date(isoString);
   if (Number.isNaN(d.getTime())) return null;
-  return new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(d);
+  return new Intl.DateTimeFormat(currentDateLocale(), { dateStyle: 'medium' }).format(d);
 }
 
 export function isEnforceableLessonVideo(video: LessonVideo): boolean {

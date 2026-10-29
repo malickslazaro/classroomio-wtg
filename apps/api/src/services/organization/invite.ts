@@ -1,3 +1,4 @@
+import { DEFAULT_LOCALE } from '@cio/utils/email';
 import type { TCourseCompletionRecord, TGroupmember, TOrganizationmember } from '@cio/db/types';
 import type { TCohortMember } from '@cio/db/queries/cohort';
 import { AppError, ErrorCodes } from '@api/utils/errors';
@@ -107,7 +108,7 @@ function getInviteStatus(invite: {
 }
 
 function getExpiryLabel(expiresAtIso: string): string {
-  return new Date(expiresAtIso).toLocaleString('en-US', {
+  return new Date(expiresAtIso).toLocaleString(DEFAULT_LOCALE, {
     dateStyle: 'medium',
     timeStyle: 'short',
     timeZone: 'UTC'

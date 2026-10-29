@@ -62,10 +62,10 @@ describe('getStudentEmailSendContext', () => {
 });
 
 describe('getStudentEmailDeliveryLocale', () => {
-  it('falls back to English when the plan lookup fails', async () => {
+  it('falls back to the default locale when the plan lookup fails', async () => {
     vi.mocked(getActiveOrganizationPlan).mockRejectedValue(new Error('database unavailable'));
     vi.spyOn(console, 'error').mockImplementation(() => {});
 
-    await expect(getStudentEmailDeliveryLocale('org-1', 'studentOrgInvite')).resolves.toBe('en');
+    await expect(getStudentEmailDeliveryLocale('org-1', 'studentOrgInvite')).resolves.toBe('es');
   });
 });

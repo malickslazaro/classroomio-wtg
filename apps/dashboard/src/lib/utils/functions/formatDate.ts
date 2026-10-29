@@ -1,3 +1,4 @@
+import { currentDateLocale } from '$lib/utils/functions/translations';
 export default (date) => {
   const d = new Date(date);
 
@@ -6,7 +7,7 @@ export default (date) => {
   const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
 
   // return `${ye}-${mo}-${da} ${d.toLocaleTimeString('en-US')}`;
-  return new Intl.DateTimeFormat('en-US', {
+  return new Intl.DateTimeFormat(currentDateLocale(), {
     dateStyle: 'full',
     timeStyle: 'medium'
   }).format(d);

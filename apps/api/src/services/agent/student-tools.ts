@@ -1,3 +1,4 @@
+import { DEFAULT_LOCALE } from '@cio/utils/email';
 import { and, eq, ilike, or } from 'drizzle-orm';
 import { tool } from 'ai';
 import { z } from 'zod';
@@ -163,7 +164,8 @@ export function buildStudentAgentTools(orgId: string, userId: string, courseId: 
             note?: string | null;
             lessonLanguages?: Array<{ locale: string; content: string | null }>;
           };
-          const content = lessonWithLangs.lessonLanguages?.find((ll) => ll.locale === 'en')?.content ?? null;
+          const languages = lessonWithLangs.lessonLanguages ?? [];
+          const content = (languages.find((ll) => ll.locale === DEFAULT_LOCALE) ?? languages[0])?.content ?? null;
 
           return {
             id: lesson.id,

@@ -1,7 +1,8 @@
 import type { TLocale } from '@cio/db/types';
 import i18n from '@sveltekit-i18n/base';
 import parser from '@sveltekit-i18n/parser-icu';
-import { writable } from 'svelte/store';
+import { DEFAULT_LOCALE } from '@cio/utils/email';
+import { get, writable } from 'svelte/store';
 
 export const config = {
   parser: parser(),
@@ -71,7 +72,11 @@ export const config = {
 
 export const { t, loading, locales, locale, initialized, translations, loadTranslations } = new i18n(config);
 
-export const selectedLocale = writable<string>('en');
+export const selectedLocale = writable<string>(DEFAULT_LOCALE);
+
+export function currentDateLocale(): string {
+  return get(locale) || DEFAULT_LOCALE;
+}
 export const LOCALE_STORAGE_KEY = 'classroomio_locale';
 export const LOCALE_COOKIE_KEY = 'classroomio_locale';
 

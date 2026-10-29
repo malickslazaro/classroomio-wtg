@@ -16,7 +16,7 @@
   import pluralize from 'pluralize';
 
   import { Image } from '$features/ui';
-  import { t } from '$lib/utils/functions/translations';
+  import { currentDateLocale, t } from '$lib/utils/functions/translations';
   import { calcCourseCost } from '$lib/utils/functions/course';
   import getCurrencyFormatter from '$lib/utils/functions/getCurrencyFormatter';
   import { calcCourseProgress, calcProgressRate } from '$features/course/utils/functions';
@@ -225,7 +225,7 @@
       return '';
     }
 
-    return new Intl.DateTimeFormat('en-US', {
+    return new Intl.DateTimeFormat(currentDateLocale(), {
       dateStyle: 'medium'
     }).format(date);
   }

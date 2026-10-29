@@ -1,3 +1,4 @@
+import { currentDateLocale } from '$lib/utils/functions/translations';
 /**
  * Determines if a submission was submitted before the due date
  * @param createdAt Submission creation timestamp
@@ -39,7 +40,7 @@ export function getMaxPoints(questions: Array<{ points: number }>): number {
  */
 export function formatSubmittedDate(date: string): string {
   const d = new Date(date);
-  return new Intl.DateTimeFormat('en-US', {
+  return new Intl.DateTimeFormat(currentDateLocale(), {
     dateStyle: 'full',
     timeStyle: 'medium'
   }).format(d);

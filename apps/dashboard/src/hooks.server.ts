@@ -96,7 +96,7 @@ function withRedirectFallbackBody(response: Response, request: Request): Respons
 
   const escapedLocation = escapeHtmlAttribute(location);
   const body =
-    `<!doctype html><html lang="en"><head><meta charset="utf-8">` +
+    `<!doctype html><html lang="es"><head><meta charset="utf-8">` +
     `<meta http-equiv="refresh" content="0; url=${escapedLocation}"></head>` +
     `<body><a href="${escapedLocation}">Continue</a></body></html>`;
 

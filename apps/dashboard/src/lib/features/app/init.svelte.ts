@@ -1,3 +1,4 @@
+import { DEFAULT_LOCALE } from '@cio/utils/email';
 import { BaseApi, classroomio } from '$lib/utils/services/api';
 import {
   currentOrg,
@@ -238,7 +239,7 @@ class AppInitApi extends BaseApi {
     if (enforcedLocale) {
       activateLocale(enforcedLocale);
     } else {
-      handleLocaleChange(this.data.profile.locale ?? params?.orgLocale ?? 'en');
+      handleLocaleChange(this.data.profile.locale ?? params?.orgLocale ?? DEFAULT_LOCALE);
     }
 
     this.setOrgStore(params);

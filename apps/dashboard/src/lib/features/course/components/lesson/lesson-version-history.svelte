@@ -17,6 +17,7 @@
   } from '$features/course/utils/lesson-version-utils';
   import { renderHtmlDiff } from '$features/course/utils/lesson-version-diff';
   import { snackbar } from '$features/ui/snackbar/store';
+  import { DEFAULT_LOCALE } from '@cio/utils/email';
   import { locale, t } from '$lib/utils/functions/translations';
 
   import type { LessonVersionEntry } from '$features/course/utils/types';
@@ -65,7 +66,7 @@
   // Dates follow the dashboard locale; a hardcoded `en-US` gave Danish and
   // German readers English weekday names and a 12-hour clock. `hour12` is left
   // to the locale for the same reason.
-  const dateLocale = $derived($locale || 'en');
+  const dateLocale = $derived($locale || DEFAULT_LOCALE);
 
   function formatTimestamp(timestamp: Date) {
     const options: Intl.DateTimeFormatOptions = {

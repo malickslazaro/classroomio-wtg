@@ -1,3 +1,4 @@
+import { DEFAULT_LOCALE } from '@cio/utils/email';
 import { AppError, ErrorCodes } from '@api/utils/errors';
 import { getCourseById, getOrganizationById, getProfileById, getCourseOrganizationId } from '@cio/db/queries';
 import { resolveCertificateDesign, type CertificateRenderInput } from '@api/utils/certificate';
@@ -27,8 +28,8 @@ export async function assembleCertificateRender(
   const issuedAtIso = body.issuedAt ?? new Date().toISOString();
   const issuedAtDate = new Date(issuedAtIso);
   const date = Number.isNaN(issuedAtDate.getTime())
-    ? new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' })
-    : issuedAtDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' });
+    ? new Date().toLocaleDateString(DEFAULT_LOCALE, { year: 'numeric', month: 'long', day: '2-digit' })
+    : issuedAtDate.toLocaleDateString(DEFAULT_LOCALE, { year: 'numeric', month: 'long', day: '2-digit' });
 
   const certificateId = body.studentId
     ? formatCertificateId(design.idFormat, body.studentId, issuedAtDate)

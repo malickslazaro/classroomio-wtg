@@ -13,7 +13,7 @@
   import { TextareaField } from '@cio/ui/custom/textarea-field';
   import ShieldCheckIcon from '@lucide/svelte/icons/shield-check';
   import { complianceApi, courseApi } from '$features/course/api';
-  import { t } from '$lib/utils/functions/translations';
+  import { currentDateLocale, t } from '$lib/utils/functions/translations';
   import { profile } from '$lib/utils/store/user';
   import type { CourseComplianceLearner, LearnerComplianceRecord } from '$features/course/utils/types';
   import { snackbar } from '$features/ui/snackbar/store';
@@ -117,7 +117,7 @@
       return t.get('course.navItem.compliance.not_available');
     }
 
-    return new Intl.DateTimeFormat('en-US', {
+    return new Intl.DateTimeFormat(currentDateLocale(), {
       dateStyle: 'medium',
       timeStyle: 'short'
     }).format(date);

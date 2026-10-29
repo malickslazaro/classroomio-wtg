@@ -6,7 +6,7 @@
   import TypeIcon from '@lucide/svelte/icons/type';
   import PaletteIcon from '@lucide/svelte/icons/palette';
   import DownloadIcon from '@lucide/svelte/icons/download';
-  import { t } from '$lib/utils/functions/translations';
+  import { currentDateLocale, t } from '$lib/utils/functions/translations';
 
   import { courseApi } from '$features/course/api';
   import { currentOrg } from '$lib/utils/store/org';
@@ -46,7 +46,7 @@
       $t('course.navItem.certificates.editor.sample_description'),
     orgName: $currentOrg.name || $t('course.navItem.certificates.editor.sample_org'),
     orgLogoUrl: $currentOrg.avatarUrl || undefined,
-    date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }),
+    date: new Date().toLocaleDateString(currentDateLocale(), { year: 'numeric', month: 'long', day: '2-digit' }),
     certificateId: (store.draft.idFormat || 'N° {seq}').replace('{seq}', '0247')
   });
 

@@ -12,7 +12,7 @@
   import { Spinner } from '@cio/ui/base/spinner';
   import { Empty } from '@cio/ui/custom/empty';
   import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-  import { t } from '$lib/utils/functions/translations';
+  import { currentDateLocale, t } from '$lib/utils/functions/translations';
   import AnalyticsPanelCard from './analytics-panel-card.svelte';
   import type { LandingStatsData } from '../utils/types';
   import { bucketSparkline, formatChartTooltipDate, getBucketSize, zeroFillRange } from '../utils/analytics-utils';
@@ -96,7 +96,7 @@
             props={{
               xAxis: {
                 format: (d: Date) =>
-                  d.toLocaleDateString('en-US', {
+                  d.toLocaleDateString(currentDateLocale(), {
                     month: 'short',
                     day: 'numeric'
                   })

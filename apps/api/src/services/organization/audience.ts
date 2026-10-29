@@ -1,3 +1,4 @@
+import { DEFAULT_LOCALE } from '@cio/utils/email';
 import { emitCohortMemberWebhookEvent, emitOrganizationMemberWebhookEvent } from '@cio/core/services/webhook/emit';
 import { AppError, ErrorCodes } from '@api/utils/errors';
 import {
@@ -90,7 +91,7 @@ function buildInviteLink(
 }
 
 function getExpiryLabel(expiresAtIso: string): string {
-  return new Date(expiresAtIso).toLocaleString('en-US', {
+  return new Date(expiresAtIso).toLocaleString(DEFAULT_LOCALE, {
     dateStyle: 'medium',
     timeStyle: 'short',
     timeZone: 'UTC'

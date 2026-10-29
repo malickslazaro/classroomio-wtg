@@ -6,7 +6,7 @@
   import * as Card from '@cio/ui/base/card';
   import ArrowRightIcon from '@lucide/svelte/icons/arrow-right';
   import ZapIcon from '@lucide/svelte/icons/zap';
-  import { t } from '$lib/utils/functions/translations';
+  import { currentDateLocale, t } from '$lib/utils/functions/translations';
 
   import { courseApi } from '$features/course/api';
   import { currentOrg, isFreePlan } from '$lib/utils/store/org';
@@ -26,7 +26,7 @@
     courseDescription: design.descriptionOverride || courseApi.course?.description || '',
     orgName: $currentOrg.name || 'Organization',
     orgLogoUrl: $currentOrg.avatarUrl || undefined,
-    date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }),
+    date: new Date().toLocaleDateString(currentDateLocale(), { year: 'numeric', month: 'long', day: '2-digit' }),
     certificateId: (design.idFormat ?? 'N° {seq}').replace('{seq}', '0247')
   });
 

@@ -316,7 +316,7 @@ export function renderOrgSiteOg(input: OrgSiteOgInput): OrgSiteOgRenderResult {
   const { body, styles } = renderOrgSiteOgTemplate(input);
 
   const html = `<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1200,initial-scale=1.0">

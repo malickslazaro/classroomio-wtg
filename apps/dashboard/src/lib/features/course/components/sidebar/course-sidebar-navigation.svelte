@@ -33,7 +33,7 @@
 
   import { NAV_IDS } from './constants';
   import { complianceApi, courseApi } from '$features/course/api';
-  import { t } from '$lib/utils/functions/translations';
+  import { currentDateLocale, t } from '$lib/utils/functions/translations';
   import { IS_AI_ENABLED } from '$lib/utils/constants/ai';
   import { currentOrg, isFreePlan, isStudentLimitReached, currentOrgPath } from '$lib/utils/store/org';
   import { isStudentExperience } from '$lib/utils/store/app';
@@ -316,7 +316,7 @@
       return '';
     }
 
-    return new Intl.DateTimeFormat('en-US', {
+    return new Intl.DateTimeFormat(currentDateLocale(), {
       dateStyle: 'medium'
     }).format(date);
   }

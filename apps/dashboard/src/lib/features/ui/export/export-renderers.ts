@@ -92,7 +92,7 @@ export function toHtml<Row>(doc: ExportDocument<Row>): string {
   const { head, body } = toExportMatrix(doc);
 
   return `<!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8" />
 <title>${escapeHtml(doc.title)}</title>

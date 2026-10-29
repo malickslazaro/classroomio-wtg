@@ -437,7 +437,7 @@ export const profile = pgTable(
     verifiedAt: timestamp('verified_at', { withTimezone: true, mode: 'string' }),
     welcomeEmailPending: boolean('welcome_email_pending').default(false).notNull(),
     welcomeEmailSentAt: timestamp('welcome_email_sent_at', { withTimezone: true, mode: 'string' }),
-    locale: locale().default('en'),
+    locale: locale().default('es'),
     isRestricted: boolean('is_restricted').default(false).notNull(),
     settings: jsonb().default({}).$type<Record<string, unknown>>()
   },
@@ -1932,7 +1932,7 @@ export const lessonLanguage = pgTable(
     }),
     content: text(),
     lessonId: uuid('lesson_id').defaultRandom(),
-    locale: locale().default('en'),
+    locale: locale().default('es'),
     updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'string' }).defaultNow().notNull()
   },
   (table) => [
@@ -2962,7 +2962,7 @@ export const courseImportDraft = pgTable(
     sourceType: courseImportSourceType('source_type').notNull(),
     status: courseImportDraftStatus('status').default('DRAFT').notNull(),
     title: varchar().notNull(),
-    locale: locale().default('en').notNull(),
+    locale: locale().default('es').notNull(),
     idempotencyKey: varchar('idempotency_key'),
     summary: jsonb().default({}).notNull().$type<Record<string, unknown>>(),
     draft: jsonb().notNull().$type<Record<string, unknown>>(),

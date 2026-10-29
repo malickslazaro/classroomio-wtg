@@ -3,7 +3,7 @@ import {
   getOrganizationById,
   getOrganizationStudentEmailTemplate
 } from '@cio/db/queries/organization';
-import { isStudentEmailId, resolveStudentEmailLocale, type EmailLocale } from '@cio/utils/email';
+import { DEFAULT_LOCALE, isStudentEmailId, resolveStudentEmailLocale, type EmailLocale } from '@cio/utils/email';
 import { PLAN } from '@cio/utils/plans';
 import { env } from '@cio/core/config/env';
 
@@ -18,14 +18,14 @@ export async function getStudentEmailDeliveryLocale(
   organizationId: string | undefined,
   emailId: string
 ): Promise<EmailLocale> {
-  if (!organizationId || !isStudentEmailId(emailId)) return 'en';
+  if (!organizationId || !isStudentEmailId(emailId)) return DEFAULT_LOCALE;
 
   try {
     const [organization, canCustomize] = await Promise.all([
       getOrganizationById(organizationId),
       canCustomizeStudentEmails(organizationId)
     ]);
-    if (!organization) return 'en';
+    if (!organization) return DEFAULT_LOCALE;
 
     const language = organization.settings?.language;
     return resolveStudentEmailLocale({
@@ -35,7 +35,7 @@ export async function getStudentEmailDeliveryLocale(
     });
   } catch (error) {
     console.error('getStudentEmailDeliveryLocale error:', error);
-    return 'en';
+    return DEFAULT_LOCALE;
   }
 }
 
@@ -44,7 +44,7 @@ export async function getStudentEmailDeliveryLocale(
  * everyone else, and any failed lookup, gets the English default.
  */
 export async function getStudentEmailSendContext(organizationId: string, emailId: string, queuedLocale: EmailLocale) {
-  const englishDefault = { locale: 'en' as EmailLocale, templateOverride: undefined };
+  const englishDefault = { locale: DEFAULT_LOCALE, templateOverride: undefined };
   if (!isStudentEmailId(emailId)) return englishDefault;
 
   try {

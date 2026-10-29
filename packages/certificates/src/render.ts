@@ -81,7 +81,7 @@ export function renderCertificate(design: CertificateDesign, data: CertificateRe
   const { body, styles } = renderer({ design: { ...design, templateId }, data });
 
   const html = `<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=${CERTIFICATE_WIDTH},initial-scale=1.0">

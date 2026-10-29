@@ -1,3 +1,4 @@
+import { DEFAULT_LOCALE } from '@cio/utils/email';
 import type { OnboardingField, OnboardingStep } from '../utils/types';
 import { currentOrg, mergeAccountOrgFromServer, orgs } from '$lib/utils/store/org';
 import { getNextStep, getPreviousStep, ONBOARDING_STEPS } from '../utils/constants';
@@ -131,7 +132,7 @@ export class OnboardingApi extends BaseApiWithErrors {
       logContext: 'submitting onboarding metadata',
       onSuccess: async (result) => {
         profile.set(result.data);
-        handleLocaleChange(result.data.locale ?? 'en');
+        handleLocaleChange(result.data.locale ?? DEFAULT_LOCALE);
 
         const welcomePopup = `${result.data.isEmailVerified}`;
         const siteName = get(currentOrg)?.siteName ?? data.siteName;

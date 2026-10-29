@@ -1,3 +1,4 @@
+import { DEFAULT_LOCALE } from '@cio/utils/email';
 import type {
   AnswerData,
   ExerciseQuestionModel,
@@ -450,7 +451,7 @@ export async function listSubmissionsForGrading(courseId: string) {
         ? new Date(submission.createdAt!).getTime() <= new Date(submission.exercise.dueBy).getTime()
         : true;
 
-      const submittedAt = new Intl.DateTimeFormat('en-US', {
+      const submittedAt = new Intl.DateTimeFormat(DEFAULT_LOCALE, {
         dateStyle: 'full',
         timeStyle: 'medium'
       }).format(new Date(submission.createdAt!));

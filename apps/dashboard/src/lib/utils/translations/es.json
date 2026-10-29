@@ -1619,7 +1619,7 @@
           "audit_actor": "Actor",
           "audit_ip": "IP",
           "scan_qr": "Escanear QR",
-          "classroomio_brand": "ClassroomIO.com",
+          "classroomio_brand": "WTG edu",
           "snackbar_invite_link_copied": "Enlace de invitación copiado",
           "snackbar_invite_link_regenerated": "Se ha generado un nuevo enlace de invitación.",
           "snackbar_failed_generate_link": "No se pudo generar el enlace de invitación",
@@ -3075,7 +3075,7 @@
     },
     "creator": {
       "heading": "¿Qué curso quieres crear?",
-      "placeholder": "Pídele a ClassroomIO que cree un curso para ti...",
+      "placeholder": "Pídele a WTG edu que cree un curso para ti...",
       "type": {
         "self_paced": "a tu propio ritmo",
         "live_class": "Clase en vivo"
@@ -3443,13 +3443,13 @@
     "goto": "Ir a",
     "courses": "Cursos",
     "home": "Inicio",
-    "classroomio_home": "Inicio de ClassroomIO",
+    "classroomio_home": "Inicio de WTG edu",
     "dashboard": "Panel",
     "discussion": "Discusión",
     "people": "gente",
     "goto_lms": "Ir a LMS",
     "join_academy": "Unirse a la academia",
-    "goto_home": "Ir a la página de inicio de ClassroomIO",
+    "goto_home": "Ir a la página de inicio de WTG edu",
     "login": "Iniciar sesión",
     "signup": "Regístrate",
     "redirecting": "Redireccionando",
@@ -3570,7 +3570,7 @@
     "tools": "Herramientas"
   },
   "media_manager": {
-    "page_title": "Administrador de medios - ClassroomIO",
+    "page_title": "Administrador de medios - WTG edu",
     "heading": "Gerente de Medios",
     "empty": "No se encontraron activos",
     "usage": {
@@ -4167,7 +4167,7 @@
         "accepted": "Aceptado:",
         "validation_error": "El tamaño del archivo excede el límite máximo:"
       },
-      "page_subtitle": "Tu nombre, correo electrónico y cómo apareces donde trabajas en ClassroomIO."
+      "page_subtitle": "Tu nombre, correo electrónico y cómo apareces donde trabajas en WTG edu."
     },
     "tabs": {
       "profile_tab": "Perfil",
@@ -4438,7 +4438,7 @@
           "description": "Inscripciones, entregas, lecciones, anuncios y finalizaciones en tus cursos."
         }
       },
-      "personal_page_subtitle": "Elige qué notificaciones por correo recibes de ClassroomIO."
+      "personal_page_subtitle": "Elige qué notificaciones por correo recibes de WTG edu."
     },
     "account": {
       "language": "Idioma",
@@ -4691,7 +4691,7 @@
       "subtitle": "Elija el que más se acerque a cómo funciona en este momento."
     },
     "use_cases": {
-      "label": "¿Para qué quieres utilizar ClassroomIO?",
+      "label": "¿Para qué quieres utilizar WTG edu?",
       "customer_training": "Capacitar a mis clientes sobre mi producto.",
       "customer_certification": "Certificar clientes o socios",
       "partner_training": "Formar socios o revendedores",
@@ -4827,7 +4827,7 @@
     "confirm_link_suffix": "para confirmar tu correo electrónico"
   },
   "public_courses": {
-    "page_title": "Cursos - ClassroomIO",
+    "page_title": "Cursos - WTG edu",
     "heading": "Cursos",
     "subtitle": "Explorar todos los cursos publicados",
     "clear_filters": "Borrar filtros",
@@ -4855,7 +4855,7 @@
     }
   },
   "tags_admin": {
-    "page_title": "Etiquetas - ClassroomIO",
+    "page_title": "Etiquetas - WTG edu",
     "heading": "Etiquetas",
     "create": "crear",
     "tag_modal": {
@@ -4909,7 +4909,7 @@
   },
   "invite": {
     "organization": {
-      "page_title": "Únase a {orgName} en ClassroomIO",
+      "page_title": "Únete a {orgName} en WTG edu",
       "invitation_student": "Has sido invitado a {orgName} como estudiante.",
       "invitation_teacher": "Has sido invitado a {orgName} como profesor.",
       "invitation_admin": "Has sido invitado a {orgName} como administrador.",
@@ -4937,7 +4937,7 @@
       "loading": "Cargando invitación..."
     },
     "link": {
-      "page_title": "Únase a {orgName} en ClassroomIO",
+      "page_title": "Únete a {orgName} en WTG edu",
       "invitation_student": "Te invitaron a unirte a {orgName} como estudiante.",
       "invitation_teacher": "Te han invitado a unirte a {orgName} como profesor.",
       "invitation_admin": "Le invitaron a unirse a {orgName} como administrador.",
@@ -5452,7 +5452,7 @@
       "border_radius": "Radio del borde",
       "font_family": "Familia de fuentes",
       "font_scale": "Escala de tamaño de fuente",
-      "show_powered_by": "Mostrar la marca Classroomio",
+      "show_powered_by": "Mostrar la atribución de la plataforma",
       "custom_css": "CSS personalizado",
       "custom_css_locked": "Actualice para habilitar CSS personalizado.",
       "embed_code": "código para insertar",
@@ -5717,8 +5717,8 @@
       "summary_template": "Obtuviste [[correcto]] / [[total]] correcto."
     },
     "powered_by": {
-      "label": "Desarrollado por",
-      "brand": "ClassroomIO"
+      "label": "Basado en",
+      "brand": "ClassroomIO (código fuente)"
     },
     "footer_nav": {
       "previous": "Anterior",
@@ -6152,7 +6152,7 @@
       "disabled": "Enlace de invitación deshabilitado"
     },
     "join": {
-      "page_title": "Únete a {resourceName} en ClassroomIO",
+      "page_title": "Únete a {resourceName} en WTG edu",
       "invitation": "Te han invitado a unirte a {resourceName} en {orgName}.",
       "course_button": "Unirse al curso",
       "cohort_button": "Unirse al grupo",
@@ -6261,14 +6261,14 @@
     },
     "gallery": {
       "title": "Galería de plantillas",
-      "subtitle": "Inicie un curso a partir de una de sus plantillas o una creada por ClassroomIO.",
+      "subtitle": "Inicia un curso a partir de una de tus plantillas o de una plantilla de la plataforma.",
       "search": "Buscar plantilla",
       "scope_all": "Todas las plantillas",
       "scope_org": "Mis plantillas",
       "scope_global": "AulaIO",
       "empty_org": "Aún no has creado ninguna plantilla. Guarda cualquier curso como plantilla desde su menú ⋯.",
       "no_match": "Ninguna plantilla coincide con \"{query}\".",
-      "empty_global": "Aún no hay plantillas de ClassroomIO.",
+      "empty_global": "Aún no hay plantillas de la plataforma.",
       "back": "Todos los cursos"
     },
     "preview": {
@@ -6324,7 +6324,7 @@
     },
     "empty": {
       "title": "Aún no hay cursos",
-      "description": "Elija una plantilla para ver cómo es un excelente curso de ClassroomIO o comience desde un curso en blanco.",
+      "description": "Elige una plantilla para ver cómo es un buen curso o empieza desde un curso en blanco.",
       "browse": "Explorar plantillas"
     },
     "editor": {

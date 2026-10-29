@@ -238,8 +238,8 @@
       "next": "Next"
     },
     "powered_by": {
-      "label": "Powered by",
-      "brand": "ClassroomIO"
+      "label": "Built on",
+      "brand": "ClassroomIO (source code)"
     },
     "exercise": {
       "submit": "Check my answers",
@@ -3874,7 +3874,7 @@
           "audit_actor": "Actor",
           "audit_ip": "IP",
           "scan_qr": "Scan QR",
-          "classroomio_brand": "ClassroomIO.com",
+          "classroomio_brand": "WTG edu",
           "snackbar_invite_link_copied": "Invite link copied",
           "snackbar_invite_link_regenerated": "A new invite link has been generated",
           "snackbar_failed_generate_link": "Failed to generate invite link",

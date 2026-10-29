@@ -192,7 +192,7 @@
 </script>
 
 <svelte:head>
-  <title>Home - ClassroomIO</title>
+  <title>Home - WTG edu</title>
 </svelte:head>
 
 {#if creatingState === 'creating'}

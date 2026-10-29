@@ -34,7 +34,7 @@
 </script>
 
 <svelte:head>
-  <title>Dashboard - ClassroomIO</title>
+  <title>Dashboard - WTG edu</title>
 </svelte:head>
 
 <Page.Root class="w-full">

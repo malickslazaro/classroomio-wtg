@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Teams - ClassroomIO</title>
+  <title>Teams - WTG edu</title>
 </svelte:head>
 
 <TeamsPage />

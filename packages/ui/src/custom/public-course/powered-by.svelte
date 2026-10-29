@@ -31,7 +31,7 @@
   }: Props = $props();
 
   const href = $derived.by(() => {
-    const url = new URL('https://classroomio.com');
+    const url = new URL('https://github.com/malickslazaro/classroomio-wtg');
 
     url.searchParams.set('utm_source', utmSource);
     url.searchParams.set('utm_medium', 'powered-by');
@@ -65,7 +65,7 @@
       className
     )}
   >
-    <img src="/logo-192.png" class="ui:size-6" alt="ClassroomIO" />
+    <img src="/logo-192.png" class="ui:size-6" alt="" />
     {label}
     <a
       {href}

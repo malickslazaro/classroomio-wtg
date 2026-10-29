@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-  <title>Integrations - ClassroomIO</title>
+  <title>Integrations - WTG edu</title>
 </svelte:head>
 
 <Page.Header>

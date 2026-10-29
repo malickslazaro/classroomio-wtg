@@ -94,7 +94,7 @@
 </script>
 
 <svelte:head>
-  <title>{$t('cohorts.page_title') || 'Cohorts'} - ClassroomIO</title>
+  <title>{$t('cohorts.page_title') || 'Cohorts'} - WTG edu</title>
 </svelte:head>
 
 <Page.Root class="w-full">

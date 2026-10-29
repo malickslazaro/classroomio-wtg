@@ -35,7 +35,7 @@
 </script>
 
 <svelte:head>
-  <title>{$t('analytics.title')} - ClassroomIO</title>
+  <title>{$t('analytics.title')} - WTG edu</title>
 </svelte:head>
 
 <Page.Root class="w-full">

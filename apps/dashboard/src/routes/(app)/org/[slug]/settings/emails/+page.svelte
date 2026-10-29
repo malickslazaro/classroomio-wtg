@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>{$t('settings.emails.page_title')} - ClassroomIO</title>
+  <title>{$t('settings.emails.page_title')} - WTG edu</title>
 </svelte:head>
 
 <EmailsPage />

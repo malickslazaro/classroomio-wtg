@@ -34,7 +34,7 @@
 </script>
 
 <svelte:head>
-  <title>{$t('widgets.heading')} - ClassroomIO</title>
+  <title>{$t('widgets.heading')} - WTG edu</title>
 </svelte:head>
 
 <Page.Root class="w-full gap-0">

@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-  <title>{t.get('automation.tabs.api')} - ClassroomIO</title>
+  <title>{t.get('automation.tabs.api')} - WTG edu</title>
 </svelte:head>
 
 <Page.Root class="mx-auto w-full max-w-4xl">

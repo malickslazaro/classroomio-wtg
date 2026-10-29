@@ -23,7 +23,7 @@
 </script>
 
 <svelte:head>
-  <title>Settings - ClassroomIO</title>
+  <title>Settings - WTG edu</title>
 </svelte:head>
 
 <Page.Header>

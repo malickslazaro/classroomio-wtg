@@ -1,12 +1,12 @@
 <script lang="ts">
   import { DashboardPage } from '$features/lms/pages';
   import { getGreeting } from '$lib/utils/functions/date';
-  import { t } from '$lib/utils/functions/translations';
+  import { currentDateLocale, t } from '$lib/utils/functions/translations';
   import { profile } from '$lib/utils/store/user';
   import { coursesApi } from '$features/course/api';
   import * as Page from '@cio/ui/base/page';
 
-  const todayLabel = new Intl.DateTimeFormat('en-US', {
+  const todayLabel = new Intl.DateTimeFormat(currentDateLocale(), {
     weekday: 'long',
     month: 'long',
     day: 'numeric'
@@ -36,7 +36,7 @@
 </script>
 
 <svelte:head>
-  <title>Student Dashboard - ClassroomIO</title>
+  <title>Student Dashboard - WTG edu</title>
 </svelte:head>
 
 <Page.Root class="mx-auto w-full max-w-4xl">

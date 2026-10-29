@@ -38,7 +38,7 @@
     orgSlug={attributionOrgSlug}
     utmSource={sidebarUtmSource}
     label={$t('public_course.powered_by.label')}
-    brand="ClassroomIO"
+    brand={$t('public_course.powered_by.brand')}
     compact={showOnlyLogo}
     align={showOnlyLogo ? 'center' : 'start'}
     class={className}

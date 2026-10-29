@@ -6,7 +6,7 @@
 
   let { data } = $props();
 
-  const orgName = $derived(data.org?.name ?? data.course?.org?.name ?? 'ClassroomIO');
+  const orgName = $derived(data.org?.name ?? data.course?.org?.name ?? 'WTG edu');
   const courseImage = $derived(data.course?.bannerImage || '');
 
   const courseJsonLd = $derived.by(() => {

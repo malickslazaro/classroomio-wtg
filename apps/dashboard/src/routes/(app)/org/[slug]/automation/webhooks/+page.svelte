@@ -7,7 +7,7 @@
   import { WEBHOOKS_DOCS_URL } from '$features/automation/utils/automation-utils';
 </script>
 
-<svelte:head><title>{t.get('automation.tabs.webhooks')} - ClassroomIO</title></svelte:head>
+<svelte:head><title>{t.get('automation.tabs.webhooks')} - WTG edu</title></svelte:head>
 <Page.Header>
   <Page.HeaderContent>
     <Page.Title>{$t('automation.tabs.webhooks')}</Page.Title>

@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-  <title>{$t('audience.import.title')} - ClassroomIO</title>
+  <title>{$t('audience.import.title')} - WTG edu</title>
 </svelte:head>
 
 <Page.Root class="mx-auto w-full max-w-3xl">

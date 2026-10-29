@@ -137,7 +137,7 @@
 </script>
 
 <svelte:head>
-  <title>{$t('course_templates.gallery.title')} - ClassroomIO</title>
+  <title>{$t('course_templates.gallery.title')} - WTG edu</title>
 </svelte:head>
 
 <Page.Root class="w-full">

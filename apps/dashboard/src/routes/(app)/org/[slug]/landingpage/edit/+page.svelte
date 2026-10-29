@@ -125,7 +125,7 @@
 </script>
 
 <svelte:head>
-  <title>Landing Page Editor - ClassroomIO</title>
+  <title>Landing Page Editor - WTG edu</title>
 </svelte:head>
 
 <div

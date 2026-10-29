@@ -21,8 +21,8 @@
     rel="noopener noreferrer"
     class="ui:flex ui:items-center ui:justify-center ui:gap-2"
   >
-    <img src="/logo-512.png" class="ui:h-7 ui:w-7" alt="ClassroomIO Logo" />
-    <span class="ui:text-foreground ui:text-md">ClassroomIO</span>
+    <img src="/logo-512.png" class="ui:h-7 ui:w-7" alt="WTG edu" />
+    <span class="ui:text-foreground ui:text-md">WTG edu</span>
   </a>
 
   <p class="ui:text-muted-foreground ui:text-sm">{tagline}</p>

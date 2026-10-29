@@ -14,7 +14,7 @@
   });
 </script>
 
-<svelte:head><title>{t.get('automation.tabs.api')} - ClassroomIO</title></svelte:head>
+<svelte:head><title>{t.get('automation.tabs.api')} - WTG edu</title></svelte:head>
 <Page.Header>
   <Page.HeaderContent>
     <Page.Title>{$t('automation.tabs.api')}</Page.Title>

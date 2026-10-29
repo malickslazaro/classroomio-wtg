@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-  <title>Organization Settings - ClassroomIO</title>
+  <title>Organization Settings - WTG edu</title>
 </svelte:head>
 
 <OrgPage bind:this={orgComponent} bind:hasUnsavedChanges />

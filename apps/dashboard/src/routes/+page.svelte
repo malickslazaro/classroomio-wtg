@@ -17,11 +17,7 @@
 
   const hasSetupError = $derived(!appInitApi.loading && !!appInitApi.error);
 
-  const pageTitle = $derived(
-    data.isOrgSite && data.org
-      ? data.org.name
-      : 'ClassroomIO - One Platform for Customer, Partner, and Employee Training'
-  );
+  const pageTitle = $derived(data.isOrgSite && data.org ? data.org.name : 'WTG edu - Formación en IA para empresas');
 
   const authAction = $derived(
     resolveOrgLandingAuthAction({

@@ -200,8 +200,8 @@
           rel="noopener noreferrer"
           class="flex w-fit items-center gap-2"
         >
-          <img src="/logo-512.png" class="h-7 w-7" alt="ClassroomIO Logo" />
-          <span class="text-base font-semibold dark:text-white">ClassroomIO</span>
+          <img src="/logo-512.png" class="h-7 w-7" alt="WTG edu" />
+          <span class="text-base font-semibold dark:text-white">WTG edu</span>
         </a>
         <p class="ui:text-muted-foreground mt-1 hidden text-sm md:block">{$t('onboarding.header.tagline')}</p>
       </header>

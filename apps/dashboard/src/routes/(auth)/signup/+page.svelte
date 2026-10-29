@@ -226,7 +226,7 @@
 </script>
 
 <svelte:head>
-  <title>Join ClassroomIO</title>
+  <title>Únete a WTG edu</title>
 </svelte:head>
 
 {#if !$globalStore.isOrgSite || $isFreePlan}

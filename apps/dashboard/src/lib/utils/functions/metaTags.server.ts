@@ -7,9 +7,8 @@ import { resolveOrgSiteOgImageUrl } from '$lib/utils/functions/org-site-og-url';
 
 const isSelfHosted = PUBLIC_IS_SELFHOSTED === 'true';
 
-const DEFAULT_TITLE = 'ClassroomIO | One Platform for Customer, Partner, and Employee Training';
-const DEFAULT_DESCRIPTION =
-  'One platform for customer academies, partner certification, and employee training. Build courses with AI, publish under your domain, and track completions.';
+const DEFAULT_TITLE = 'WTG edu | Formación en IA para empresas';
+const DEFAULT_DESCRIPTION = 'Formación en IA para empresas, por Way to Grow.';
 const CLOUD_OG_IMAGE = 'https://brand.cdn.clsrio.com/og/classroomio-opengraph.jpg';
 const ORG_OG_WIDTH = 1200;
 const ORG_OG_HEIGHT = 630;
@@ -59,7 +58,7 @@ function buildOrgOpenGraphImages(ogImageUrl: string, orgName: string) {
   return [
     {
       url: ogImageUrl,
-      alt: `${orgName} learning platform`,
+      alt: `${orgName} · plataforma de formación`,
       width: ORG_OG_WIDTH,
       height: ORG_OG_HEIGHT,
       secureUrl: ogImageUrl.startsWith('https://') ? ogImageUrl : undefined,
@@ -105,7 +104,7 @@ export async function getBaseMetaTags(url: URL, orgSiteInfo: OrgSiteInfo): Promi
     orgMeta?.siteName ||
     publicEnv.PUBLIC_APP_TITLE?.trim() ||
     (isSelfHosted && orgSiteInfo.org?.name ? orgSiteInfo.org.name : null) ||
-    'ClassroomIO';
+    'WTG edu';
 
   const ogImageUrl = await resolveOgImageUrl(url, orgSiteInfo);
   const usesDynamicOrgOg =
@@ -116,25 +115,15 @@ export async function getBaseMetaTags(url: URL, orgSiteInfo: OrgSiteInfo): Promi
     : [
         {
           url: ogImageUrl,
-          alt: `${siteName} platform for customer, partner, and employee education`,
+          alt: `${siteName} · plataforma de formación`,
           width: 1920,
           height: 1080,
           secureUrl: ogImageUrl.startsWith('https://') ? ogImageUrl : undefined,
           type: 'image/jpeg'
-        },
-        {
-          url: 'https://brand.cdn.clsrio.com/og/classroomio-opengraph.webp',
-          alt: `${siteName} platform for customer, partner, and employee education`,
-          width: 1920,
-          height: 1080,
-          secureUrl: 'https://brand.cdn.clsrio.com/og/classroomio-opengraph.webp',
-          type: 'image/webp'
         }
       ];
 
-  const imageAlt = usesDynamicOrgOg
-    ? `${siteName} learning platform`
-    : `${siteName} platform for customer, partner, and employee education`;
+  const imageAlt = `${siteName} · plataforma de formación`;
 
   return Object.freeze({
     title,

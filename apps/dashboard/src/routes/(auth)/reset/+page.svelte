@@ -37,7 +37,7 @@
 </script>
 
 <svelte:head>
-  <title>Reset Password - ClassroomIO</title>
+  <title>Reset Password - WTG edu</title>
 </svelte:head>
 
 <AuthUI
